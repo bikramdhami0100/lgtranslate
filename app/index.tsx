@@ -3,6 +3,7 @@ import { StyleSheet, View, ScrollView, TextInput, Keyboard, TouchableWithoutFeed
 import { Button, Text, useTheme } from 'react-native-paper';
 import Animated, { FadeIn, FadeOut, useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
 import { translateText } from './GoogleAI';
+import { Stack } from 'expo-router';
 
 const AnimatedButton = Animated.createAnimatedComponent(Button);
 
@@ -43,6 +44,7 @@ export default function App() {
 
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+      {/* <Stack.Screen  /> */}
       <ScrollView contentContainerStyle={[styles.container, { backgroundColor: theme.colors.background }]}>
         <Text style={[styles.title, { color: theme.colors.primary }]}>Language Translator</Text>
 
